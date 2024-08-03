@@ -64,7 +64,7 @@ EOL
         echo "生成config.json文件。"
     else
         # Update the port in config.json if it exists
-        jq --arg port "$port" '.port = ($port | tonumber)' ~/domains/$USER.ydns.eu/vless/config.json > ~/domains/qin.ydns.eu/vless/config_tmp.json && mv ~/domains/qin.ydns.eu/vless/config_tmp.json ~/domains/qin.ydns.eu/vless/config.json
+        jq --arg port "$port" '.port = ($port | tonumber)' ~/domains/$USER.ydns.eu/vless/config.json > ~/domains/$USER.ydns.eu/vless/config_tmp.json && mv ~/domains/$USER.ydns.eu/vless/config_tmp.json ~/domains/$USER.ydns.eu/vless/config.json
         echo "config.json文件已存在，端口号已更新。"
     fi
 }
